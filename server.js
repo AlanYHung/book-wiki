@@ -19,6 +19,11 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', getHomepage);
+app.get('/searches/new', getSearches);
+
+function getSearches(req, res){
+  res.render('pages/searches/new.ejs');
+}
 
 function getHomepage(req, res){
   res.render('pages/index.ejs');
