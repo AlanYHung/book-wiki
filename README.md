@@ -30,3 +30,10 @@ Codefellows:
   * Start time: <u>2:00</u>
   * Finish time: <u>2:35</u>
   * Actual time needed to complete: <u>35 Min</u>
+
+
+#### Input Form and New Search Route Creation
+  * Estimate of time needed to complete: <u> 1 Hour</u>
+  * Start time: <u>2:40</u>
+  * Finish time: <u>3:00</u>
+  * Actual time needed to complete: <u>20 Min</u>

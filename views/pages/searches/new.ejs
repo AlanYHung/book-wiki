@@ -15,15 +15,15 @@
     <h1>
       New Google Books Search
     </h1>
-    <form>
+    <form action = "/searches/new" method = "POST">
       <fieldset>
         <label>Search:</label>
-        <input type = "text">
-        <select>
-          <option name = "author">Author</option>
-          <option name = "title">Title</option>
+        <input type = "text" name = "search">
+        <select name = "searchBy">
+          <option value = "author">Author</option>
+          <option value = "title">Title</option>
         </select>
-        <button>Submit</button>
+        <input type = submit>
       </fieldset>
     </form>
   </main>
