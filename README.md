@@ -43,3 +43,9 @@ Codefellows:
   * Start time: <u>3:00</u>
   * Finish time: <u>6:00</u>
   * Actual time needed to complete: <u>3 Hours</u>
+
+  #### Error Catching
+  * Estimate of time needed to complete: <u> 0.5 Hour</u>
+  * Start time: <u>6:22</u>
+  * Finish time: <u></u>
+  * Actual time needed to complete: <u></u>
