@@ -1,4 +1,74 @@
-img {
-  width: 100px;
-  height: 100px;
+header{
+  height: 10vh;
+  font-size: xx-large;
+  background-color: #0f9068;
+}
+
+header h1{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  height: 100%;
+  background-color: #0f906880;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 500px;
+}
+
+ul{
+  width: 100%;
+  height: 100%
+}
+
+li{
+  width 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+img{
+  width: auto;
+  height: 300px;
+}
+
+@media(min-width: 768px){
+  form{
+    max-width: 600px;
+  }
+
+  ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  li{
+    width: 400px;
+  }
 }

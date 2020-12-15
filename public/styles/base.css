@@ -1,6 +1,8 @@
 *{
   box-sizing: border-box;
   width: 100vw;
-  background-color: purple;
 }
 
+body{
+  background-color: #0f906860;
+}
