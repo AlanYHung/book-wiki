@@ -38,18 +38,15 @@ function callBookApi(req, res){
     superagent.get(bookURL)
       .query({
         q: `inauthor:${req.body.search}`,
-        key: BOOK_API
+        key: BOOK_API,
       })
       .then(data =>{
         const temp1 = data.body.items;
         bookArr.push(temp1.map(arrayObject => {
-          console.log(arrayObject);
-          const temp = new BookObject (arrayObject);
-          console.log(temp);
-          return ('hello');
+          return new BookObject (arrayObject);
         }));
-
-        // res.render('pages/searches/show.ejs', bookArr);
+        console.log(bookArr);
+        res.render('pages/searches/show.ejs', req.body);
       })
       .catch(error => {res.status(500).send(error);});
   } else{
@@ -66,13 +63,14 @@ function callBookApi(req, res){
   //intitle
   //inauthor
   // console.log(req.body);
+  console.log(bookArr);
 }
 
 //TODO: HTTP convert to HTTPS
 //TODO: 
 
 function BookObject(jsonBookObject){
-  this.img_url = jsonBookObject.volumeInfo.imagelinks.thumbnail || "https://i.imgur.com/J5LVHEL.jpg";
+  this.img_url = jsonBookObject.volumeInfo.imageLinks.thumbnail || "https://i.imgur.com/J5LVHEL.jpg";
   this.title = jsonBookObject.volumeInfo.title || "Title";
   this.authors = jsonBookObject.volumeInfo.authors || "Authors";
   this.description = jsonBookObject.volumeInfo.description || "Description";
