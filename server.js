@@ -47,7 +47,7 @@ function callBookApi(req, res){
       res.render('pages/searches/show.ejs',{books : bookArr[0]});
     }).catch(error =>{
       console.error(error);
-      res.status(500).send('Something went wrong on our page.')
+      res.status(500).send('Your search returned no results.')
     });
 }
 

@@ -1,0 +1,17 @@
+#searchLabel{
+  width: 15%;
+}
+
+#searchBox{
+  width: 85%
+}
+
+#searchDrop{
+  width: 15%;
+  margin-top: 5px;;
+}
+
+#submitButton{
+  width: 85%;
+  margin-top: 5px;;
+}

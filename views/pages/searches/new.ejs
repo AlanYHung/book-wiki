@@ -9,21 +9,20 @@
 </head>
 <body>
   <header>
-
-  </header>
-  <main>
     <h1>
       New Google Books Search
     </h1>
+  </header>
+  <main>
     <form action = "/searches" method = "POST">
       <fieldset>
-        <label>Search:</label>
-        <input type = "text" name = "search">
-        <select name = "searchBy">
+        <label id="searchLabel">Search:</label>
+        <input type = "text" name = "search" id="searchBox">
+        <select name = "searchBy" id="searchDrop">
           <option value = "author">Author</option>
           <option value = "title">Title</option>
         </select>
-        <input type = submit>
+        <input type = submit id="submitButton">
       </fieldset>
     </form>
   </main>

@@ -47,5 +47,5 @@ Codefellows:
   #### Error Catching
   * Estimate of time needed to complete: <u> 0.5 Hour</u>
   * Start time: <u>6:22</u>
-  * Finish time: <u></u>
-  * Actual time needed to complete: <u></u>
+  * Finish time: <u>7:44</u>
+  * Actual time needed to complete: <u>1 Hr 22 Min</u>
