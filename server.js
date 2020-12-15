@@ -44,11 +44,11 @@ function callBookApi(req, res){
       bookArr.push(temp1.map(arrayObject => {
         return new BookObject (arrayObject);
       }));
-      // console.log(bookArr);
       res.render('pages/searches/show.ejs',{books : bookArr[0]});
-    })
-    .catch(error => {res.status(500).send(error);});
-  // console.log(bookArr);
+    }).catch(error =>{
+      console.error(error);
+      res.status(500).send('Something went wrong on our page.')
+    });
 }
 
 function BookObject(jsonBookObject){
