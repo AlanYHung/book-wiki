@@ -31,7 +31,6 @@ Codefellows:
   * Finish time: <u>2:35</u>
   * Actual time needed to complete: <u>35 Min</u>
 
-
 #### Input Form and New Search Route Creation
   * Estimate of time needed to complete: <u> 1 Hour</u>
   * Start time: <u>2:40</u>
@@ -44,8 +43,14 @@ Codefellows:
   * Finish time: <u>6:00</u>
   * Actual time needed to complete: <u>3 Hours</u>
 
-  #### Error Catching
+#### Error Catching
   * Estimate of time needed to complete: <u> 0.5 Hour</u>
   * Start time: <u>6:22</u>
   * Finish time: <u>7:44</u>
   * Actual time needed to complete: <u>1 Hr 22 Min</u>
+
+#### Deploy index.ejs on Load
+  * Estimate of time needed to complete: <u>10 Min</u>
+  * Start time: <u>N/A</u>
+  * Finish time: <u>N/A</u>
+  * Actual time needed to complete: <u>Completed in Server Setup</u>
