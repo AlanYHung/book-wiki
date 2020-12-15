@@ -4,17 +4,19 @@ const express = require ('express');
 const superagent = require('superagent');
 const cors = require('cors');
 const BOOK_API = process.env.BOOK_API;
-
-const app = express();
-
+const pg = require('pg');
+const { response } = require('express');
 require ('dotenv').config();
 
 const PORT = process.env.PORT || 9999;
-app.use(cors());
 
+const app = express();
+const client = new pg.Client(process.env.DATABASE_URL);
+client.on('error', error => console.error(error));
+
+app.use(cors());
 app.use(express.static('./public'));
 app.use(express.urlencoded({extended: true}));
-
 app.set('view engine', 'ejs');
 
 
@@ -55,8 +57,12 @@ function BookObject(jsonBookObject){
   this.img_url = jsonBookObject.volumeInfo.imageLinks.thumbnail.replace('http', 'https') || "https://i.imgur.com/J5LVHEL.jpg";
   this.title = jsonBookObject.volumeInfo.title || "Title";
   this.authors = jsonBookObject.volumeInfo.authors || "Authors";
-  this.description = jsonBookObject.volumeInfo.description || "Description";
+  this.bookDescription = jsonBookObject.volumeInfo.description || "Description";
+  this.isbn = `${jsonBookObject.volumeInfo.industryIdentifiers[1].type} ${jsonBookObject.volumeInfo.industryIdentifiers[1].identifier};
 }
 
-
+app.use('*', (req, res) => {
+  response.status(404).send('Page does not exist.')
+});
+client.connect();
 app.listen(PORT, () => console.log(`Server is listening to ${PORT}`));

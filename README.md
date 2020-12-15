@@ -14,8 +14,16 @@ Css stylesheets for the front end display utilizing ejs to render content on the
 
 ## Change Log
 
+## Postgress SQL Database
+#### Database Name: books_wiki
+  * Table: books
+    1. Column 1: id
+    1. Column 2: img_url
+    1. Column 3: title
+    1. Column 4: authors
+    1. Column 5: bookDescription
 
- ## Credits and Collaborations
+## Credits and Collaborations
 Codefellows:
 
 ### Features
@@ -54,3 +62,9 @@ Codefellows:
   * Start time: <u>N/A</u>
   * Finish time: <u>N/A</u>
   * Actual time needed to complete: <u>Completed in Server Setup</u>
+
+  #### Setup SQL Database
+  * Estimate of time needed to complete: <u>30 Min</u>
+  * Start time: <u></u>
+  * Finish time: <u></u>
+  * Actual time needed to complete: <u></u>
