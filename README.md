@@ -37,3 +37,9 @@ Codefellows:
   * Start time: <u>2:40</u>
   * Finish time: <u>3:00</u>
   * Actual time needed to complete: <u>20 Min</u>
+
+#### Google Books API Call and Search Results Render
+  * Estimate of time needed to complete: <u> 1 Hour</u>
+  * Start time: <u>3:00</u>
+  * Finish time: <u>6:00</u>
+  * Actual time needed to complete: <u>3 Hours</u>
