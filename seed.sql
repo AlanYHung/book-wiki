@@ -1,2 +1,2 @@
-INSERT INTO books (img_url, title, authors, bookDescription, isbn) VALUES ('Book Pic', 'Title 1', 'Someone', 'Read Me Now', 'ABC-123');
-INSERT INTO books (img_url, title, authors, bookDescription, isbn) VALUES ('Book Pic', 'Title 2', 'Someone Important', 'Read Me Later', 'DEF-456');
+INSERT INTO books (img_url, title, authors, bookDescription, isbn) VALUES ('https://books.google.com/books/content?id=hr__fFaUFL0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', 'Native Seattle', 'Coll Thrush', 'Book about Native Americans', 'ISBN_13 9780295989921');
+INSERT INTO books (img_url, title, authors, bookDescription, isbn) VALUES ('http://books.google.com/books/content?id=gz45oqzIJI4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api', 'Vanishing Seattle', 'Clark Humphrey', 'Book about Seattle Landmarks', 'ISBN_13 9780738548692');

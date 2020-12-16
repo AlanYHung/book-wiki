@@ -63,8 +63,20 @@ Codefellows:
   * Finish time: <u>N/A</u>
   * Actual time needed to complete: <u>Completed in Server Setup</u>
 
-  #### Setup SQL Database
+#### Setup SQL Database
   * Estimate of time needed to complete: <u>30 Min</u>
-  * Start time: <u></u>
-  * Finish time: <u></u>
-  * Actual time needed to complete: <u></u>
+  * Start time: <u>1:30</u>
+  * Finish time: <u>2:15</u>
+  * Actual time needed to complete: <u>45 Min</u>
+
+#### Render Home Page
+  * Estimate of time needed to complete: <u>1 Hour</u>
+  * Start time: <u>2:17</u>
+  * Finish time: <u>2:48</u>
+  * Actual time needed to complete: <u>31 Min</u>
+
+#### Add a View Details Link and Page
+  * Estimate of time needed to complete: <u>1 Hour</u>
+  * Start time: <u>2:49</u>
+  * Finish time: <u>3:57</u>
+  * Actual time needed to complete: <u>1 Hour 12 Min</u>
