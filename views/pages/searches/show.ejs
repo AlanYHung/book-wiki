@@ -16,12 +16,7 @@
   <main>
     <ul>
       <% for(let i = 0; i <books.length; i++) { %>
-        <li>
-          <img src = <%= books[i].img_url %> >
-          <h2><%= books[i].title %></h2>
-          <h4> <%= books[i].authors %></h4>
-          <p><%= books[i].description %></p>
-        </li>
+        <%- include('../books/details', {indexObj: books[i], targetUrl: '../books/show', buttonValue: 'Add Book to Library'}) %>
      <% } %>
     </ul>
   </main>

@@ -16,7 +16,7 @@
   <main>
     <h2>Number of Books: <%= indexData.length %></h2> 
     <% indexData.forEach(indexObj => { %>
-      <%- include('./books/details', {indexObj: indexObj}) %>
+      <%- include('./books/details', {indexObj: indexObj, buttonValue: 'View Details'}) %>
     <% }) %>
   </main>
   <footer>
