@@ -43,6 +43,7 @@ function getHomepage(req, res){
 }
 
 function getBookDetails(req, res){
+  // TODO: Add an if Statement for SQL Insert
   let sqlBookDetails = 'SELECT * FROM books WHERE id=$1';
   client.query(sqlBookDetails, [req.params.details])
     .then(result => {
@@ -76,11 +77,10 @@ function callBookApi(req, res){
 
 function BookObject(jsonBookObject){
   this.img_url = jsonBookObject.volumeInfo.imageLinks && jsonBookObject.volumeInfo.imageLinks.thumbnail.replace('http', 'https') || "https://i.imgur.com/J5LVHEL.jpg";
-  this.title = jsonBookObject.volumeInfo.title || "Title";
-  this.authors = jsonBookObject.volumeInfo.authors || "Authors";
-  this.book_description = jsonBookObject.volumeInfo.description || "Description";
-  this.isbn = jsonBookObject.volumeInfo.industryIdentifiers[1] && `${jsonBookObject.volumeInfo.industryIdentifiers[1].type} ${jsonBookObject.volumeInfo.industryIdentifiers[1].identifier}` ||
-  'No ISBN 13';
+  this.title = jsonBookObject.volumeInfo.title || "No Title";
+  this.authors = jsonBookObject.volumeInfo.authors || "Unknown Authors";
+  this.book_description = jsonBookObject.volumeInfo.description || "No Description";
+  this.isbn = jsonBookObject.volumeInfo.industryIdentifiers && jsonBookObject.volumeInfo.industryIdentifiers[1] && `${jsonBookObject.volumeInfo.industryIdentifiers[1].type} ${jsonBookObject.volumeInfo.industryIdentifiers[1].identifier}` || 'No ISBN 13';
 }
 
 app.use('*', (req, res) => {

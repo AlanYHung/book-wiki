@@ -10,11 +10,11 @@
 <body>
   <%- include('../partials/header') %>
   <main>
-    <ul>
+    <div class = "book_list_display">
       <% for(let i = 0; i <books.length; i++) { %>
-        <%- include('../books/details', {indexObj: books[i], targetUrl: '../books/show', buttonValue: 'Add Book to Library'}) %>
-     <% } %>
-    </ul>
+        <%- include('../books/details', {indexObj: books[i], targetUrl: '/books/' + books[i].id, buttonValue: 'Save Book'}) %>
+      <% } %>
+    </div>
   </main>
   <footer>
 

@@ -10,17 +10,19 @@
 <body>
   <%- include('../partials/header') %>
   <main>
-    <form action = "/searches" method = "POST">
-      <fieldset>
-        <label id="searchLabel">Search:</label>
-        <input type = "text" name = "search" id="searchBox">
-        <select name = "searchBy" id="searchDrop">
-          <option value = "author">Author</option>
-          <option value = "title">Title</option>
-        </select>
-        <input type = submit id="submitButton">
-      </fieldset>
-    </form>
+    <div id="form_display">
+      <form action = "/searches" method = "POST">
+        <fieldset>
+          <label id="searchLabel">Search:</label>
+          <input type = "text" name = "search" id="searchBox">
+          <select name = "searchBy" id="searchDrop">
+            <option value = "author">Author</option>
+            <option value = "title">Title</option>
+          </select>
+          <input type = submit id="submitButton">
+        </fieldset>
+      </form>
+    </div>
   </main>
   <footer>
 

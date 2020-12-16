@@ -1,3 +1,7 @@
+/* ======================================================================================================= */
+/* ======================================== Header Partial Display ======================================= */
+/* ======================================================================================================= */
+
 header{
   height: 10vh;
   font-size: xx-large;
@@ -12,13 +16,9 @@ header h1{
   align-items: center;
 }
 
-#home_page_list{
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+/* ======================================================================================================= */
+/* ===================================== Book Detail Partial Display ===================================== */
+/* ======================================================================================================= */
 
 .display_books{
   width: 300px;
@@ -27,4 +27,29 @@ header h1{
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.display_books h3{
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.display_books h5{
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.display_books img{
+  width: auto;
+  height: 300px;
+}
+
+.display_books p{
+  margin: 2px;
+}
+
+.display_books a input{
+  width: 80%;
 }
