@@ -50,6 +50,11 @@ header h1{
   margin: 2px;
 }
 
-.display_books a input{
-  width: 80%;
+.display_books form input{
+  width: 100%;
+}
+
+
+#saveBookForm{
+  width:80%;
 }
