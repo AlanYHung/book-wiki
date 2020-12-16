@@ -38,7 +38,7 @@ function getHomepage(req, res){
       res.render('pages/index.ejs', {indexData: indexData});
     })
     .catch(error => {
-      console.error(`SQL Data retrieve Error: ${error}`)
+      console.error(`SQL Data retrieve Error: ${error}`);
     });
 }
 
@@ -75,11 +75,12 @@ function callBookApi(req, res){
 }
 
 function BookObject(jsonBookObject){
-  this.img_url = jsonBookObject.volumeInfo.imageLinks.thumbnail.replace('http', 'https') || "https://i.imgur.com/J5LVHEL.jpg";
+  this.img_url = jsonBookObject.volumeInfo.imageLinks && jsonBookObject.volumeInfo.imageLinks.thumbnail.replace('http', 'https') || "https://i.imgur.com/J5LVHEL.jpg";
   this.title = jsonBookObject.volumeInfo.title || "Title";
   this.authors = jsonBookObject.volumeInfo.authors || "Authors";
   this.bookDescription = jsonBookObject.volumeInfo.description || "Description";
-  this.isbn = `${jsonBookObject.volumeInfo.industryIdentifiers[1].type} ${jsonBookObject.volumeInfo.industryIdentifiers[1].identifier}`;
+  this.isbn = jsonBookObject.volumeInfo.industryIdentifiers[1] && `${jsonBookObject.volumeInfo.industryIdentifiers[1].type} ${jsonBookObject.volumeInfo.industryIdentifiers[1].identifier}` ||
+  'No ISBN 13';
 }
 
 app.use('*', (req, res) => {

@@ -1,7 +1,7 @@
 # Open Shelf: A Book Wiki
 
 **Author**: Alan Hung & James Gerstenberger
-**Version**: 1.0.0
+**Version**: 0.9.4
 
 ## Overview
 This program is a basic full-stack application for a book list which will include the ability to search the Google Books API, add books to a database, and then render those books from a PostgreSQL database. You will also add the ability to update the details of a book or remove it from the collection.
