@@ -1,0 +1,9 @@
+<section class="display_books">
+  <h3>Title: <%= indexObj.title %></h2>
+  <h5>Authors: <%= indexObj.authors %></h4>
+  <img src=<%= indexObj.img_url %> alt=<%= indexObj.Description %>>
+  <p>Description: <%= indexObj.isbn %></p>
+  <a href=<%= `/books/${indexObj.id}` %>>
+    <input type="button" value="View Details">
+  </a>
+</section>

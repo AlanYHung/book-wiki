@@ -9,12 +9,15 @@
 </head>
 <body>
   <header>
-
+    <h1>
+      New Google Books Search
+    </h1>
   </header>
   <main>
-    <h1>
-      Howdy Partner
-    </h1>
+    <h2>Number of Books: <%= indexData.length %></h2> 
+    <% indexData.forEach(indexObj => { %>
+      <%- include('./books/details', {indexObj: indexObj}) %>
+    <% }) %>
   </main>
   <footer>
 

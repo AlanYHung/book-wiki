@@ -22,6 +22,7 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', getHomepage);
+app.get('/books/:details', getBookDetails);
 app.get('/searches/new', getSearches);
 app.post('/searches', callBookApi);
 
@@ -30,7 +31,27 @@ function getSearches(req, res){
 }
 
 function getHomepage(req, res){
-  res.render('pages/index.ejs');
+  let sqlBookQuery = 'SELECT * FROM books';
+  client.query(sqlBookQuery)
+    .then(results => {
+      let indexData = results.rows
+      res.render('pages/index.ejs', {indexData: indexData});
+    })
+    .catch(error => {
+      console.error(`SQL Data retrieve Error: ${error}`)
+    });
+}
+
+function getBookDetails(req, res){
+  let sqlBookDetails = 'SELECT * FROM books WHERE id=$1';
+  client.query(sqlBookDetails, [req.params.details])
+    .then(result => {
+      const resultData = result.rows[0];
+      res.render('pages/books/show.ejs', {indexObj: resultData});
+    })
+    .catch(error => {
+      console.error(`Failure to Retrieve Book from Database.  Error: ${error}`);
+    });
 }
 
 function callBookApi(req, res){
@@ -58,7 +79,7 @@ function BookObject(jsonBookObject){
   this.title = jsonBookObject.volumeInfo.title || "Title";
   this.authors = jsonBookObject.volumeInfo.authors || "Authors";
   this.bookDescription = jsonBookObject.volumeInfo.description || "Description";
-  this.isbn = `${jsonBookObject.volumeInfo.industryIdentifiers[1].type} ${jsonBookObject.volumeInfo.industryIdentifiers[1].identifier};
+  this.isbn = `${jsonBookObject.volumeInfo.industryIdentifiers[1].type} ${jsonBookObject.volumeInfo.industryIdentifiers[1].identifier}`;
 }
 
 app.use('*', (req, res) => {
