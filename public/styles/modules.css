@@ -1,29 +1,14 @@
 /* ======================================================================================================= */
-/* ======================================== Book Template Display ======================================== */
+/* ========================================== Book List Display ========================================== */
 /* ======================================================================================================= */
 
-.display_books h3{
-  font-size: x-large;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.display_books h5{
-  font-weight: bold;
-  margin-bottom: 3px;
-}
-
-.display_books img{
-  width: auto;
-  height: 300px;
-}
-
-.display_books p{
-  margin: 2px;
-}
-
-.display_books a input{
-  width: 80%;
+.book_list_display{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 /* ======================================================================================================= */
@@ -49,4 +34,57 @@
   width: 50vw;
   text-align: center;
   margin: auto;
+}
+
+/* ======================================================================================================= */
+/* ============================================= Form Display ============================================ */
+/* ======================================================================================================= */
+
+#form_display{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+form{
+  height: 100%;
+  background-color: #0f906880;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 500px;
+}
+
+#searchLabel{
+  width: 15%;
+}
+
+#searchBox{
+  width: 85%
+}
+
+#searchDrop{
+  width: 15%;
+  margin-top: 5px;;
+}
+
+#submitButton{
+  width: 85%;
+  margin-top: 5px;;
+}
+
+@media(min-width: 600px){
+  form{
+    max-width: 600px;
+  }
 }
