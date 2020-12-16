@@ -13,7 +13,7 @@
     <h2>Number of Books: <%= indexData.length %></h2> 
     <div class = "book_list_display">
       <% indexData.forEach(indexObj => { %>
-        <%- include('./books/details', {indexObj: indexObj, targetUrl: '/books/' + indexObj.id, buttonValue: 'View Details'}) %>
+        <%- include('./books/details', {indexObj: indexObj, requestMethod: 'GET', targetUrl: '/books/' + indexObj.id, buttonValue: 'View Details'}) %>
         <!-- Need to add in a SQL Insert to -->
       <% }) %>
     </div>

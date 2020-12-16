@@ -12,7 +12,7 @@
   <main>
     <div class = "book_list_display">
       <% for(let i = 0; i <books.length; i++) { %>
-        <%- include('../books/details', {indexObj: books[i], targetUrl: '/books', buttonValue: 'Save Book'}) %>
+        <%- include('../books/details', {indexObj: books[i], targetUrl: '/books', requestMethod: 'POST', buttonValue: 'Save Book'}) %>
       <% } %>
     </div>
   </main>
