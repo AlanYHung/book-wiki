@@ -11,7 +11,7 @@
     <%- include('../partials/header') %>
     <main>
       <div id="book_detail_display">
-        <%- include('./details', {indexObj: indexObj, targetUrl: '/', buttonValue: 'Home Page'}) %>
+        <%- include('./details', {indexObj: indexObj, requestMethod: 'GET', targetUrl: '/', buttonValue: 'Home Page'}) %>
       </div>
       <p id="book_description_title">Book Description:<p>
       <p id="book_detail_description"><%= indexObj.book_description %></p>

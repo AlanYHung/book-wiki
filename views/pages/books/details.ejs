@@ -3,7 +3,7 @@
   <h5>Authors: <%= indexObj.authors %></h4>
   <img src="<%= indexObj.img_url %>" alt="<%= indexObj.img_url %>" title="<%= indexObj.book_description %>">
   <p><%= indexObj.isbn %></p>
-  <form id = "saveBookForm" action ="<%= targetUrl %>" method = "POST">
+  <form id = "saveBookForm" action ="<%= targetUrl %>" method = "<%= requestMethod %>">
     <input class = "hidden_form" type="hidden" name = "title" value="<%= indexObj.title %>">
     <input class = "hidden_form" type="hidden" name = "authors" value="<%= indexObj.authors %>">
     <input class = "hidden_form" type="hidden" name = "img_url" value="<%= indexObj.img_url %>">
