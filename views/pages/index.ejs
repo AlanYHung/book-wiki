@@ -8,16 +8,14 @@
   <link href= "./styles/modules.css" rel = "stylesheet" type = "text/css">
 </head>
 <body>
-  <header>
-    <h1>
-      New Google Books Search
-    </h1>
-  </header>
+  <%- include('./partials/header') %>
   <main>
     <h2>Number of Books: <%= indexData.length %></h2> 
-    <% indexData.forEach(indexObj => { %>
-      <%- include('./books/details', {indexObj: indexObj, buttonValue: 'View Details'}) %>
-    <% }) %>
+    <div id = "home_page_list">
+      <% indexData.forEach(indexObj => { %>
+        <%- include('./books/details', {indexObj: indexObj, targetUrl: './books/' + indexObj.id, buttonValue: 'View Details'}) %>
+      <% }) %>
+    </div>
   </main>
   <footer>
 

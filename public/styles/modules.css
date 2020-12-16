@@ -1,17 +1,52 @@
-#searchLabel{
-  width: 15%;
+/* ======================================================================================================= */
+/* ======================================== Book Template Display ======================================== */
+/* ======================================================================================================= */
+
+.display_books h3{
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-#searchBox{
-  width: 85%
+.display_books h5{
+  font-weight: bold;
+  margin-bottom: 3px;
 }
 
-#searchDrop{
-  width: 15%;
-  margin-top: 5px;;
+.display_books img{
+  width: auto;
+  height: 300px;
 }
 
-#submitButton{
-  width: 85%;
-  margin-top: 5px;;
+.display_books p{
+  margin: 2px;
+}
+
+.display_books a input{
+  width: 80%;
+}
+
+/* ======================================================================================================= */
+/* ========================================= Book Detail Display ========================================= */
+/* ======================================================================================================= */
+
+#book_detail_display{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px 0 30px 0;
+}
+
+#book_description_title{
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold; 
+  margin-bottom: 10px;
+}
+
+#book_detail_description{
+  width: 50vw;
+  text-align: center;
+  margin: auto;
 }

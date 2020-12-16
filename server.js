@@ -78,13 +78,13 @@ function BookObject(jsonBookObject){
   this.img_url = jsonBookObject.volumeInfo.imageLinks && jsonBookObject.volumeInfo.imageLinks.thumbnail.replace('http', 'https') || "https://i.imgur.com/J5LVHEL.jpg";
   this.title = jsonBookObject.volumeInfo.title || "Title";
   this.authors = jsonBookObject.volumeInfo.authors || "Authors";
-  this.bookDescription = jsonBookObject.volumeInfo.description || "Description";
+  this.book_description = jsonBookObject.volumeInfo.description || "Description";
   this.isbn = jsonBookObject.volumeInfo.industryIdentifiers[1] && `${jsonBookObject.volumeInfo.industryIdentifiers[1].type} ${jsonBookObject.volumeInfo.industryIdentifiers[1].identifier}` ||
   'No ISBN 13';
 }
 
 app.use('*', (req, res) => {
-  response.status(404).send('Page does not exist.')
+  response.status(404).send('Page does not exist.');
 });
 client.connect();
 app.listen(PORT, () => console.log(`Server is listening to ${PORT}`));

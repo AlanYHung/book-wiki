@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-  </head>
+    <title>A Book-Wiki: Book Details</title>
+    <link href= "../styles/reset.css" rel = "stylesheet" type = "text/css">
+    <link href= "../styles/base.css" rel = "stylesheet" type = "text/css">
+    <link href= "../styles/layout.css" rel = "stylesheet" type = "text/css">
+    <link href= "../styles/modules.css" rel = "stylesheet" type = "text/css">
+    </head>
   <body>
-    <header></header>
+    <%- include('../partials/header') %>
     <main>
-      <%- include('./details', {indexObj: indexObj}) %>
+      <div id="book_detail_display">
+        <%- include('./details', {indexObj: indexObj, targetUrl: '/', buttonValue: 'Home Page'}) %>
+      </div>
+      <p id="book_description_title">Book Description:<p>
+      <p id="book_detail_description"><%= indexObj.book_description %></p>
     </main>
     <footer>
-      <a href="../">Home Page</a>
     </footer>
   </body>
 </html>
