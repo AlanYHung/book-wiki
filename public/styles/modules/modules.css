@@ -11,6 +11,11 @@
   margin-top: 20px;
 }
 
+#book-count{
+  font-weight:bold;
+  font-size: large;
+}
+
 /* ======================================================================================================= */
 /* ========================================= Book Detail Display ========================================= */
 /* ======================================================================================================= */
@@ -29,13 +34,14 @@
 }
 
 #detail_page_update_side{
-  width: 40%;
-  height: 100vh;
+  width: 250px;
+  height: 50vh;
   border: black solid 1px;
+  margin-right: 5%;
 }
 
 #book_detail_form_update{
-  width: 100%;
+  width: 250px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -43,19 +49,30 @@
   flex-wrap: wrap;
 }
 
+#book_description{
+  height: 40px;
+}
+
 #form_checkbox{
   width: 50%;
   margin: auto;
   background-color: #0f906800;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 #update_checkbox{
   width: 30px;
 }
 
+
 #update_cb_label{
   width: 100px;
+}
+
+#delete_form{
+  width: 50%;
+  margin:auto;
+  margin-bottom: 20px;
 }
 
 #book_detail_display{
@@ -124,8 +141,21 @@ fieldset{
 
 #submitButton{
   width: 85%;
-  margin-top: 5px;;
+  margin-top: 5px;
 }
+
+.hidden_form{
+  display: none;
+}
+
+#id_hidden_label, #id_hidden_input{
+  display:none;
+}
+
+#detail_page_update_side, #book_detail_form_update{
+  display:none;
+}
+
 
 @media(min-width: 600px){
   form{
