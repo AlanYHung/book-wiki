@@ -1,6 +1,6 @@
 <form id = "<%= formPartialIDE %>" action ="<%= targetUrlE %>" method = "<%= requestMethodE %>">
-  <label class = "<%= formLabelInputID %>">ID: </label>
-  <input class = "<%= formLabelInputID %>" type="<%= inputType %>" name = "id" value="<%= indexObjE.id %>">
+  <label class = "<%= formLabelInputID %>" id = "id_hidden_label">ID: </label>
+  <input class = "<%= formLabelInputID %>" id = "id_hidden_input" type="<%= inputType %>" name = "id" value="<%= indexObjE.id %>">
   <label class = "<%= formLabelInputID %>">Title: </label>
   <input class = "<%= formLabelInputID %>" type="<%= inputType %>" name = "title" value="<%= indexObjE.title %>">
   <label class = "<%= formLabelInputID %>">Authors: </label>
@@ -8,7 +8,7 @@
   <label class = "<%= formLabelInputID %>">Img_URL: </label>
   <input class = "<%= formLabelInputID %>" type="<%= inputType %>" name = "img_url" value="<%= indexObjE.img_url %>">
   <label class = "<%= formLabelInputID %>">Book Description: </label>
-  <input class = "<%= formLabelInputID %>" type="<%= inputType %>" name = "book_description" value="<%= indexObjE.book_description %>">
+  <input class = "<%= formLabelInputID %>" id = "book_description" type="<%= inputType %>" name = "book_description" value="<%= indexObjE.book_description %>">
   <label class = "<%= formLabelInputID %>">ISBN: </label>
   <input class = "<%= formLabelInputID %>" type="<%= inputType %>" name = "isbn" value="<%= indexObjE.isbn %>">
   <input type="submit" value="<%= buttonValueE %>">

@@ -1,7 +1,7 @@
 # Open Shelf: A Book Wiki
 
 **Author**: Alan Hung & James Gerstenberger
-**Version**: 0.9.4
+**Version**: 1.0.0
 
 ## Overview
 This program is a basic full-stack application for a book list which will include the ability to search the Google Books API, add books to a database, and then render those books from a PostgreSQL database. You will also add the ability to update the details of a book or remove it from the collection.
@@ -22,9 +22,13 @@ Css stylesheets for the front end display utilizing ejs to render content on the
     1. Column 3: title
     1. Column 4: authors
     1. Column 5: bookDescription
+    1. Column 6: ISBN
 
 ## Credits and Collaborations
-Codefellows:
+Codefellows: Instructor Nicholas Carigan and TA's Bade, Chance, Brai
+Google Fonts
+W3 Schools
+Google Books API
 
 ### Features
 #### Repository Setup
@@ -104,3 +108,9 @@ Codefellows:
   * Start time: <u>5:30</u>
   * Finish time: <u>6:45</u>
   * Actual time needed to complete: <u>1 Hour 15 Min</u>
+
+#### CSS Styling
+  * Estimate of time needed to complete: <u>1 Hour</u>
+  * Start time: <u>2:30</u>
+  * Finish time: <u>3:50</u>
+  * Actual time needed to complete: <u>1 Hour 20 Min</u>

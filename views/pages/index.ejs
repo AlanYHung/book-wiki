@@ -12,7 +12,7 @@
 <body>
   <%- include('./partials/header') %>
   <main>
-    <h2>Number of Books: <%= indexData.length %></h2> 
+    <h2 id = "book-count">Number of Books: <%= indexData.length %></h2> 
     <div class = "book_list_display">
       <% indexData.forEach(indexObj => { %>
         <%- include('./books/details', {indexObj: indexObj, requestMethod: 'GET', targetUrl: '/books/' + indexObj.id, buttonValue: 'View Details', formPartialID: 'saveBookForm', formLabelInputID: 'hidden_form', inputType: 'hidden'}) %>
@@ -22,7 +22,6 @@
   <footer>
 
   </footer>
-
 </body>
 
 </html>

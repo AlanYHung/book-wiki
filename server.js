@@ -110,8 +110,8 @@ function callBookApi(req, res) {
 
 function updateBookData(req, res){
   sqlUpdate(req).then(results => {
-    res.render('pages/books/show.ejs', { indexObj: results.rows[0] });
-  })
+    res.redirect(`/books/${results.rows[0].id}`);
+  });
 }
 
 function deleteBookData(req, res){

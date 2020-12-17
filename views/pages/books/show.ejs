@@ -21,7 +21,7 @@
             <input id="update_checkbox" type="checkbox">
             <label id="update_cb_label">Update Book Information</label>
           </form>
-          <form action="/?_method=DELETE" method="POST">
+          <form id = "delete_form" action="/?_method=DELETE" method="POST">
             <input type="hidden" name="id" value=<%= indexObj.id %>>
             <input type="submit" value="Delete Book">
           </form>
@@ -42,5 +42,6 @@
     </main>
     <footer>
     </footer>
+    <script src = "../js/app.js" type = "text/javascript"></script>
   </body>
 </html>
