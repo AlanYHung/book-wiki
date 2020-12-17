@@ -7,6 +7,7 @@ const BOOK_API = process.env.BOOK_API;
 const pg = require('pg');
 const { response } = require('express');
 require('dotenv').config();
+const methodOverride = require('method-override');
 
 const PORT = process.env.PORT || 9999;
 
@@ -17,6 +18,7 @@ client.on('error', error => console.error(error));
 app.use(cors());
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
 
 
@@ -25,10 +27,11 @@ app.get('/books/:details', getBookDetails);
 app.get('/searches/new', getSearches);
 app.post('/searches', callBookApi);
 app.post('/books', savedBook);
+app.put('/books/:details', updateBookData);
+app.delete('/', deleteBookData);
 
 function sqlGet(req) {
-  const sqlArray = [req.body.title, req.body.img_url, req.body.isbn, req.body.authors, req.body.description];
-
+  const sqlArray = [req.body.title, req.body.img_url, req.body.isbn, req.body.authors, req.body.book_description];
   const sql = 'INSERT INTO books (title, img_url, isbn, authors, book_description) VALUES ($1, $2, $3, $4, $5) RETURNING *';
   return client.query(sql, sqlArray);
 }
@@ -41,6 +44,18 @@ function sqlReturn() {
 function sqlDetails(req) {
   let sqlBookDetails = 'SELECT * FROM books WHERE id=$1';
   return client.query(sqlBookDetails, [req.params.details]);
+}
+
+function sqlUpdate(req){
+  const updateSQL = 'UPDATE books SET title=$2, authors=$3, isbn=$4, book_description=$5, img_url=$6 WHERE id=$1 RETURNING *';
+  const sqlValues = [req.body.id, req.body.title, req.body.authors, req.body.isbn, req.body.book_description, req.body.img_url];
+  return client.query(updateSQL, sqlValues);
+}
+
+function sqlDelete(req){
+  const deleteSQL = 'DELETE FROM books WHERE id=$1';
+  const sqlValues = [req.body.id];
+  return client.query(deleteSQL, sqlValues);
 }
 
 function catchError(error, res){
@@ -69,8 +84,6 @@ function getHomepage(req, res) {
 }
 
 function getBookDetails(req, res) {
-  // TODO: Add an if Statement for SQL Insert
-
   sqlDetails(req).then(result => {
     const resultData = result.rows[0];
     res.render('pages/books/show.ejs', { indexObj: resultData });
@@ -93,6 +106,20 @@ function callBookApi(req, res) {
       }));
       res.render('pages/searches/show.ejs', { books: bookArr[0] });
     }).catch(error => catchError(error, res));
+}
+
+function updateBookData(req, res){
+  sqlUpdate(req).then(results => {
+    res.render('pages/books/show.ejs', { indexObj: results.rows[0] });
+  })
+}
+
+function deleteBookData(req, res){
+  sqlDelete(req)
+    .then(() => {
+      res.redirect('/');
+    })
+    .catch(error => catchError(error));
 }
 
 function BookObject(jsonBookObject) {

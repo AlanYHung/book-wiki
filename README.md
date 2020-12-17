@@ -80,3 +80,27 @@ Codefellows:
   * Start time: <u>2:49</u>
   * Finish time: <u>3:57</u>
   * Actual time needed to complete: <u>1 Hour 12 Min</u>
+
+#### SQL Queries and Errors refactored into Callback Functions
+  * Estimate of time needed to complete: <u>1 Hour</u>
+  * Start time: <u>1:00</u>
+  * Finish time: <u>1:30</u>
+  * Actual time needed to complete: <u>30 Min</u>
+
+#### Styling and Font Family
+  * Estimate of time needed to complete: <u>1 Hour</u>
+  * Start time: <u>1:30</u>
+  * Finish time: <u>2:00</u>
+  * Actual time needed to complete: <u>30 Min</u>
+
+#### Update Book Data
+  * Estimate of time needed to complete: <u>1 Hour</u>
+  * Start time: <u>2:00</u>
+  * Finish time: <u>4:30</u>
+  * Actual time needed to complete: <u>2 Hr 30 Min</u>
+
+#### Delete Book from Database
+  * Estimate of time needed to complete: <u>1 Hour</u>
+  * Start time: <u>5:30</u>
+  * Finish time: <u>6:45</u>
+  * Actual time needed to complete: <u>1 Hour 15 Min</u>

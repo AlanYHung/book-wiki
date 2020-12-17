@@ -54,7 +54,10 @@ header h1{
   width: 100%;
 }
 
-
 #saveBookForm{
   width:80%;
+}
+
+#book_detail_form{
+  display: none;
 }
