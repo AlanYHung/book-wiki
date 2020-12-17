@@ -12,11 +12,33 @@
   <body>
     <%- include('../partials/header') %>
     <main>
-      <div id="book_detail_display">
-        <%- include('./details', {indexObj: indexObj, requestMethod: 'GET', targetUrl: '/', buttonValue: 'Home Page'}) %>
+      <div id="detail_body">
+        <div id="detail_page_book_side">
+          <div id="book_detail_display">
+            <%- include('./details', {indexObj: indexObj, requestMethod: 'GET', targetUrl: '/', buttonValue: 'Home Page', formPartialID: 'book_detail_form', formLabelInputID: 'hidden_form', inputType: 'hidden'}) %>
+          </div>
+          <form id="form_checkbox">
+            <input id="update_checkbox" type="checkbox">
+            <label id="update_cb_label">Update Book Information</label>
+          </form>
+          <form action="/?_method=DELETE" method="POST">
+            <input type="hidden" name="id" value=<%= indexObj.id %>>
+            <input type="submit" value="Delete Book">
+          </form>
+          <p id="book_description_title">Book Description:<p>
+          <p id="book_detail_description"><%= indexObj.book_description %></p>
+        </div>
+
+        <div id="detail_page_update_side">
+          <%- include('./edit', {indexObjE: indexObj, 
+                                  requestMethodE: 'POST', 
+                                  targetUrlE: '/books/' + indexObj.id + '?_method=PUT', 
+                                  buttonValueE: 'Update Book', 
+                                  formPartialIDE: 'book_detail_form_update', 
+                                  formLabelInputID: 'update_form', 
+                                  inputType: 'text'}) %>
+        </div>
       </div>
-      <p id="book_description_title">Book Description:<p>
-      <p id="book_detail_description"><%= indexObj.book_description %></p>
     </main>
     <footer>
     </footer>

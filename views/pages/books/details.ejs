@@ -3,14 +3,6 @@
   <h5>Authors: <%= indexObj.authors %></h4>
   <img src="<%= indexObj.img_url %>" alt="<%= indexObj.img_url %>" title="<%= indexObj.book_description %>">
   <p><%= indexObj.isbn %></p>
-  <form id = "saveBookForm" action ="<%= targetUrl %>" method = "<%= requestMethod %>">
-    <input class = "hidden_form" type="hidden" name = "title" value="<%= indexObj.title %>">
-    <input class = "hidden_form" type="hidden" name = "authors" value="<%= indexObj.authors %>">
-    <input class = "hidden_form" type="hidden" name = "img_url" value="<%= indexObj.img_url %>">
-    <input class = "hidden_form" type="hidden" name = "book_description" value="<%= indexObj.book_description %>">
-    <input class = "hidden_form" type="hidden" name = "isbn" value="<%= indexObj.isbn %>">
-    <input type="submit" value="<%= buttonValue %>">
-  </form>
+  <%- include('./edit', {indexObjE: indexObj, requestMethodE: requestMethod, targetUrlE: targetUrl, buttonValueE: buttonValue, formPartialIDE: formPartialID}) %>
 </section>
 
-<!-- Why does some value strings work without quotes -->
